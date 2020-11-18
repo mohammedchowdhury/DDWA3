@@ -1,0 +1,9 @@
+// making a call by ZipCode
+//current weather 
+
+api.openweathermap.org/data/2.5/weather?zip=11373&appid=9a94aa440a7af08000fac2be8a5b2a01
+
+// making a call by ZipCode
+// 5 day forecast weather 
+
+api.openweathermap.org/data/2.5/forecast?zip=11373&appid=9a94aa440a7af08000fac2be8a5b2a01

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Contacts</title>
+        <link href="css/bootstrap.css" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Contact Application</h1>
+            <hr/>
+
+            <ul class="list-group" id="errorMessages"></ul>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- left side of the screen -->
+                    <div id="contactTableDiv"> 
+                        <h2>My Contacts</h2>
+                        <table id="ContactTable" class="table table-hover" style="border-style: dotted">
+                            <tr>
+                                <th width="40%">Company Name</th>
+                                <th width="30%">Company</th>
+                                <th width="15%"></th>
+                                <th width="15%"></th>
+                            </tr>
+                            <!-- we populate this usign Jquery -->
+                            <tbody id="contentRows"></tbody>
+                        </table>
+                    </div> 
+
+                    <div id=editFormDiv style="display: none;">
+                        <h2>Edit Contact</h2>
+                        <form class="form-horizontal" role="form" id="edit-form">
+                            <!-- edit first name -->
+                            <div class = "form-group">
+                                <label for="edit-first-name" class="col-md-4 control-label">
+                                   Edit First Game:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="edit-first-name"
+                                            placeholder="First Name" required
+                                    />
+                                </div>
+                            </div>
+                            <!-- edit Last name -->
+                            <div class = "form-group">
+                                <label for="edit-last-name" class="col-md-4 control-label">
+                                   Edit Last Game:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="edit-last-name"
+                                            placeholder="Last Name" required
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- edit company -->
+                            <div class = "form-group">
+                                <label for="edit-company" class="col-md-4 control-label">
+                                   Company:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="edit-company"
+                                            placeholder="Company"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- edit email -->
+                            <div class = "form-group">
+                                <label for="edit-email" class="col-md-4 control-label">
+                                   Email:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="edit-email"
+                                            placeholder="Email" required
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- edit Phone -->
+                            <div class = "form-group">
+                                <label for="edit-phone" class="col-md-4 control-label">
+                                   Phone:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="edit-phone"
+                                            placeholder="Phone"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-4">
+                                    <input type="hidden" id="edit-contact-id">
+                                    <button type="button"
+                                            id="edit-cancel-button"
+                                            class="btn btn-default"
+                                            onclick="hideEditForm()">
+                                            Cancel
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button type="button"
+                                            id="edit-button"
+                                            class="btn btn-default">
+                                            Update Contact
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h2>Add New Contact</h1>
+                        <!-- code for form  -->
+                        <form class = "form-horizontal" role="form" id="add-form">
+                            <!-- first name -->
+                            <div class = "form-group">
+                                <label for="add-first-name" class="col-md-4 control-label">
+                                    First Name:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="add-first-name"
+                                            placeholder="First Name" required
+                                    />
+                                </div>
+                            </div>
+                            <!-- last name -->
+                            <div class = "form-group">
+                                <label for="add-last-name" class="col-md-4 control-label">
+                                    Last Name:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="add-last-name"
+                                            placeholder="Last Name" required/>
+                                </div>
+                            </div>
+
+                            <!-- company -->
+                            <div class = "form-group">
+                                <label for="add-company" class="col-md-4 control-label">
+                                    Company:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="add-company"
+                                            placeholder="Company" />
+                                </div>
+                            </div>
+                        
+                            <!-- email -->
+                            <div class = "form-group">
+                              <label for="add-email" class="col-md-4 control-label">
+                                  Email:
+                              </label>
+                              <div class="col-md-8">
+                                  <input type="text"
+                                          class="form-control"
+                                          id="add-email"
+                                          placeholder="Email" required
+                                  />
+                              </div>
+                          </div>
+
+
+                            <!-- phone -->
+                            <div class = "form-group">
+                                <label for="add-phone" class="col-md-4 control-label">
+                                    Phone:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text"
+                                            class="form-control"
+                                            id="add-phone"
+                                            placeholder="Phone" />
+                                </div>
+                            </div>
+                            <!-- button for submit  -->
+                            <div class = "form-group">
+                                <div class="col-md-offset-4 col-md-8">
+                                    <button type="button"
+                                        id="add-button"
+                                        class="btn btn-default">
+                                        Create Contact
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/contactList.js"></script>
+    </body>
+
+</html>

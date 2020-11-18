@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Contacts</title>
+        <link href="css/bootstrap.css" rel="stylesheet"> 
+    </head>
+    
+    <body>
+        <div class="container">
+            
+            <div class = "row">
+                <h1 class="text-center">Weather Page</h1>
+                <hr/>
+            </div>
+            
+            <div class = "row">
+                <!-- display all the errors here  -->
+                <ul class="list-group" id="errorMessages"></ul>
+            </div>
+
+
+            <div class = "row">
+                <form class="form-horizontal" role="form" id="edit-form">
+
+                <div class = "form-group">
+                    <label for="Zipcode" class="col-md-offset-3 col-md-1 control-label">
+                        Zipcode:
+                    </label>
+ 
+                    <input class="col-md-1" type="text"
+                        class="form-control"
+                        id="Zipcode"
+                        placeholder="00000" required/>
+                
+                    <label class="col-md-1 control-label" for="units">Units:</label>
+                    <select class="col-md-1 control-label" name="units" id="units">
+                      <option value="Imperial">Imperial</option>
+                      <option value="Metric">Metric</option>
+                    </select>
+
+                    <div class="col-md-2">
+                        <button type="button"
+                            id="getWeather-button"
+                            class="btn btn-default">
+                            Get Weather
+                        </button>
+                    </div>
+                </div>
+                </form>
+            </div>
+            <hr/>
+
+            <!-- show when get weather button is clicked -->
+            <div id="hideMe">
+                <!-- out daily data goes here  -->
+                <div class = "row">
+                    <div>
+                        <h2 id = "cityName"></h2>
+                    </div>
+
+                    <div class = "col-md-1">
+                        <p id="showIcon"></p>
+                    </div>
+
+                    <div class = "col-md-2">
+                        <p id="showIconDecs"></p>
+                    </div>
+
+                    <div class = "col-md-3">
+                        <p id="showTemp"></p>
+                        <p id="showHumidity"></p>
+                        <p id="showWindSpeed"></p>
+                    </div>
+        
+
+
+                    <div class = "col-md-3">
+                        <img src="images/sunrise.png" alt="suset" width="50">
+                        <h6>Sunrise</h6>
+                        <p id="sunriseTime"></p>
+                    </div>
+                    <div class = "col-md-3">
+                        <img src="images/sunset.svg" alt="suset" width="50">
+                        <h6>Sunset</h6>
+                        <p id="sunsetTime"></p>
+                    </div>
+                </div>
+
+                <hr/>
+
+                <div class="row">
+                    <div class = "row">
+                        <h2>Five Day Forecast</h2>
+                    </div>
+
+                    <div class = "row">
+
+                        <div class = "col-md-2" id="day1"> 
+                        </div>
+
+                        <div class = "col-md-2" id="day2">
+                        </div>
+
+                        <div class = "col-md-2" id="day3">
+                        </div>
+
+                        <div class = "col-md-2" id="day4">
+                        </div>
+
+                        <div class = "col-md-2" id="day5">
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/weather.js"></script>
+    </body>
+</html>

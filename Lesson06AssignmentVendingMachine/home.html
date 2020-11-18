@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vending Machine</title>
+        <link href="css/bootstrap.css" rel="stylesheet"> 
+    </head>
+
+    <body>
+        <div class="container text-center" >
+            <h1>Vending Machine</h1>
+            <hr/>
+            <ul id="errorMessages"></ul>
+
+            <div class= "row">
+                <!-- right side  -->
+                <div id="itemHolder" class="col-md-9" style="border:solid red">
+
+
+                    
+                   <!-- dummy templates -->
+                    <!-- <div class = "col-md-4 btn" style="border:solid blue">
+                        <p id="itemCounter">item Number</p><br>
+                        <P id="itemName">Item name</P><br>
+                        <p id="price">$0.00</p><br>
+                        <p id="quantity">Quantity Left: 2</p>
+                    </div>
+                    <div class = "col-md-4 btn" style="border:solid blue">
+                        <p id="itemCounter">item Number</p><br>
+                        <P id="itemName">Item name</P><br>
+                        <p id="price">$0.00</p><br>
+                        <p id="quantity">Quantity Left: 2</p>
+                    </div>
+                    <div class = "col-md-4 btn" style="border:solid blue">
+                        <p id="itemCounter">item Number</p><br>
+                        <P id="itemName">Item name</P><br>
+                        <p id="price">$0.00</p><br>
+                        <p id="quantity">Quantity Left: 2</p>
+                    </div>
+                    <div class = "col-md-4 btn" style="border:solid blue">
+                        <p id="itemCounter">item Number</p><br>
+                        <P id="itemName">Item name</P><br>
+                        <p id="price">$0.00</p><br>
+                        <p id="quantity">Quantity Left: 2</p>
+                    </div> -->
+
+                    
+
+
+
+
+
+                </div>
+
+                <!-- leftSide of the screen  -->
+                <div class="col-md-3" style="border:solid">
+                    <div class ="row">
+                        <p class="col-md-12">Total $ In</p><br>
+                    </div>
+                  
+
+                    <div class="row pull-right">
+                        <input class="col-md-6" style="text-align:center" class="col-md-6" type="text"
+                            class="form-control"
+                            id="money"
+                            placeholder="$0.00" readonly required/>
+                        <br><br>
+                    </div>
+                    <div class="row">
+                        <button  id = "dollar" type="button" class="btn btn-light col-md-6">Add Dollar</button>
+                        <button  id = "quarter" type="button" class="btn btn-light col-md-6">Add Quarter</button>
+                        <button  id ="dime" type="button" class="btn btn-light col-md-6">Add Dime</button>
+                        <button  id = "nickle" type="button" class="btn btn-light col-md-6">Add Nickle</button>
+                    </div>
+                        <hr class = " col-md-11">
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="message">Messages</label>
+                            <textarea class="form-control" rows="5" id="message" readonly></textarea>
+                          </div>
+                    </div>
+
+                    <div class="row">
+                      
+                            <fieldset>
+                            <!-- Text input-->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="itemSelected ">Item:</label>  
+                              <div class="col-md-8">
+                                <input class="col-md-11" style="text-align:center" type="text"
+                                class="form-control"
+                                id="itemSelected"
+                                placeholder="Item" readonly required/>
+                              <!-- <input id="textinput " name="textinput " type="text" placeholder="Item" class="form-control input-md" readonly> -->
+                              </div>
+                            </div>
+                            <!-- Button -->
+                            <div class="form-group">
+                              <label class="col-md-4 control-label" for="makePurchase"></label>
+                              <div class="col-md-4">
+                                <button id="makePurchase" name="makePurchase" class="btn btn-light">Make Purchase</button>
+                              </div>
+                            </div>
+                            </fieldset>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <!-- Text input-->
+                            <div class="form-group">
+                                <label for="change">Change</label>
+                                <textarea class="form-control" rows="5" id="change" readonly></textarea>
+                              </div>
+                            
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="changeReturn"></label>
+                                <div class="col-md-4">
+                                <button id="changeReturn" name="changeReturn" class="btn btn-inverse">Change Return</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+    
+        </div>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/dataService.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class='text-center'>Vending Machine</h1>
+        <hr />
+    </div>
+    <div class="container" id="mainDiv">
+
+
+        <!-- This div is for the items and their information -->
+        <div class="grid" id="itemsList">
+            <!-- <div class="cell" id="firstItem">1 <br />Snickers $1.85 Quantity Left: 8</div>
+            <div class="cell" id="secondItem">2</div>
+            <div class="cell" id="thirdItem">3</div>
+            <div class="cell" id="fourthItem">4</div>
+            <div class="cell" id="fifthItem">5</div>
+            <div class="cell" id="sixthItem">6</div>
+            <div class="cell" id="seventhItem">7</div>
+            <div class="cell" id="eigthItem">8</div>
+            <div class="cell" id="ninthItem">9</div>  -->
+
+        </div>
+
+        <!-- This is for the buttons and text input -->
+        <div id="secondDiv">
+            <form class="form-horizontal" id="collectMoneyForm">
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-12 control-label" for="textinput">Total $
+                        in</label>
+                    <div class="col-md-12">
+                        <input id="dollarInput" name="dollarInput" type="text" placeholder='$0.00'
+                            class="form-control input-md" readonly>
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="row btn-group" id="1stButton">
+                    <button type='button' id="addDollar" name="addDollar" class="btn btn-primary">Add Dollar</button>
+                    <button type='button' id="addQuarter" name="addQuarter" class="btn btn-primary">Add Quarter</button>
+                </div>
+                <div class="row btn-group" id="2ndButton">
+                    <button type='button' id="addDime" name="addDime" class="btn btn-primary">Add Dime</button>
+                    <button type='button' id="addNickel" name="addNickel" class="btn btn-primary">Add Nickel</button>
+                </div>
+                <hr />
+            </form>
+            <form class="form-horizontal" id="displayMessageForm">
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-12 control-label" for="messages">Messages</label>
+                    <div class="col-md-12">
+                        <input id="messages" name="messages" type="text" placeholder="" class="form-control input-md"
+                            readonly>
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class=" row form-group">
+                    <label class="col-md-2 control-label" for="item">Item: </label>
+                    <div class="col-md-8">
+                        <input id="item" name="item" type="text" placeholder="" class="form-control" readonly>
+
+                    </div>
+                </div>
+                
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <button type="button" id="makePurchase" name="makePurchase" class="btn btn-primary">Make
+                            Purchase</button>
+                    </div>
+                </div>
+                <hr />
+            </form>
+
+            <form class="form-horizontal" id="changeForm">
+                <!-- Text input-->
+                <div class="form-group" id="changeDiv">
+                    <label class="col-md-12 control-label" for="messages">Change</label>
+                    <div class="col-md-12">
+                        <input id="changeMessage" name="changeMessage" type="text" placeholder=""
+                            class="form-control input-md" readonly>
+
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <button type='button' id="changeReturn" name="changeReturn" class="btn btn-primary">Change
+                            Return</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/78896d35e2.js"></script>
+    <script src="js/dataService.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

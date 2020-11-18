@@ -1,0 +1,5 @@
+java -jar ContactListRESTService.jar
+
+
+
+java -jar /Users/mohammedchowdhury/Desktop/SoftwareGuild/GuildJava/SoftwareGuildJava/V2MileStone3/Lesson06ExerciseDVDLibrary/DvdLibraryRESTWebService.jar

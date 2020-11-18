@@ -1,0 +1,81 @@
+body {
+    background-color: #F5F5F5;
+}
+
+#add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#addDollar, #addQuarter, #addDime, #addNickel, #makePurchase {
+    margin: 5px;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* establish flex container */
+    /* flex-wrap: wrap; */
+    float: left;
+    width: 80%;
+    /* enable flex items to wrap */
+    /* justify-content: space-around; */
+}
+
+.cell { 
+    display: flex;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    /* flex-wrap: wrap; */
+    /* flex: 0 0 28%; */
+    justify-content: center;
+    /* align-content: center; */
+    /* don't grow, don't shrink, width */
+    height: auto;
+    width: auto;
+    margin: 20px;
+}
+
+#secondDiv {
+    text-align: center;
+    float: right;
+    width: 20%;
+}
+
+.cell:hover {
+    background-color: #F7D040;
+}
+
+.pageNumber{
+    display: inline-block;
+    margin-left: 0px;
+}
+
+@media screen and (min-width: 1280px) {
+    .grid {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 1279px) and (min-width: 769px) {
+    .grid {
+      width: 60%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .grid {
+      width: 40%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
